@@ -1,11 +1,7 @@
 # 4FitLife-Backend
 
 ## Running
-Build the Jar
+Execute the running script for you OS
 ```bash
-./gradlew build
-```
-Run the docker compose
-```bash
-docker-compose up web
+./docker-start.[sh|ps1]
 ```
