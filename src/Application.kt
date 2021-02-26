@@ -1,8 +1,8 @@
 package com.github
 
+import com.github.mongo.MongoInterface
 import io.ktor.application.*
 import io.ktor.response.*
-import io.ktor.request.*
 import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.gson.*
@@ -12,6 +12,8 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = true) {
+    MongoInterface.initialize()
+
     install(ContentNegotiation) {
         gson { }
 
