@@ -8,10 +8,11 @@ class ApplicationTest {
     @Test
     fun testRoot() {
         withTestApplication({ module(testing = true) }) {
-            handleRequest(HttpMethod.Get, "/").apply {
-                assertEquals(HttpStatusCode.OK, response.status())
-                assertEquals("HELLO WORLD!", response.content)
-            }
+//            val userId = "603919060e85ae02ac9d438a"
+//            val date = "2021/02/27"
+//            handleRequest(HttpMethod.Get, "/day?userId=$userId&date=$date").apply {
+//                assertEquals(HttpStatusCode.OK, response.status())
+//            }
         }
     }
 }
